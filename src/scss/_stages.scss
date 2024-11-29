@@ -1,0 +1,270 @@
+.stages {
+  @include blockWrapper;
+  margin-bottom: 15rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 7.2rem;
+  }
+}
+
+.stages__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.stages__heading {
+  font-size: 5.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 115%;
+
+  @include breakpoint(mobile) {
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%;
+  }
+}
+
+.stages__text {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  max-width: 114rem;
+  margin-top: 3.2rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    margin-top: 2.4rem;
+  }
+}
+
+.stages__list {
+  margin-top: 3.2rem;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+
+  @include breakpoint(mobile) {
+    margin-top: 2.4rem;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 1.6rem;
+  }
+}
+
+.stages__list-item {
+  display: flex;
+  flex-direction: column;
+  &::before {
+    display: none;
+  }
+  @include breakpointMF(small-tablet) {
+    &:nth-child(1) {
+      grid-row: span 2;
+      grid-column: span 2;
+      .stages__card-content {
+        padding: 5.6rem;
+        padding-bottom: 3rem;
+        padding-top: 3.6rem;
+      }
+    }
+
+    &:nth-child(4) {
+      grid-column: span 2;
+
+      .stages__card-content {
+        display: flex;
+        align-items: flex-start;
+        gap: 2.4rem;
+      }
+
+      .stages__card-text {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}
+
+.stages__card {
+  border-radius: 0.8rem;
+  background: #fff;
+  box-shadow: -0.2rem -0.2rem 1.2rem 0rem rgba(8, 159, 124, 0.25),
+    0.2rem 0.2rem 1.2rem 0rem rgba(8, 159, 124, 0.25),
+    -0.2rem -0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset,
+    0.2rem 0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset;
+  display: grid;
+  grid-template-areas: "icon counter" "content content";
+  grid-gap: 2rem;
+  grid-row-gap: 2rem;
+  flex-grow: 1;
+  overflow: hidden;
+  overflow: clip;
+
+  @include breakpoint(mobile) {
+    border-radius: 0.8rem;
+    background: #fff;
+    box-shadow: -0.2rem -0.2rem 1.2rem 0rem rgba(8, 159, 124, 0.25),
+      0.2rem 0.2rem 1.2rem 0rem rgba(8, 159, 124, 0.25),
+      -0.2rem -0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset,
+      0.2rem 0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset;
+    grid-row-gap: 3.2rem;
+  }
+
+  &::before {
+    content: counter(ordered-list, decimal-leading-zero);
+    grid-area: counter;
+    justify-self: flex-end;
+    font-size: 8.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 90%;
+    color: var(--primary-color);
+    margin-right: 3.7rem;
+    align-self: flex-end;
+    margin-bottom: 0.6rem;
+
+    @include breakpoint(mobile) {
+      font-size: 4rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 90%;
+      margin-top: 1.2rem;
+      margin-bottom: 0;
+      margin-right: 1.2rem;
+    }
+  }
+}
+
+.stages__card-icon {
+  grid-area: icon;
+  width: 9.6rem;
+  height: 9.6rem;
+  object-fit: contain;
+  align-self: flex-start;
+  justify-self: flex-start;
+
+  @include breakpoint(mobile) {
+    width: 5.6rem;
+    height: 5.6rem;
+  }
+}
+
+.stages__card-content {
+  grid-area: content;
+  padding-left: 3.2rem;
+  padding-right: 2.4rem;
+  padding-bottom: 3.2rem;
+
+  @include breakpoint(mobile) {
+    padding: 2.4rem;
+    padding-top: 0;
+    padding-bottom: 4rem;
+  }
+}
+
+.stages__card-title {
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  @include breakpoint(mobile) {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+.stages__card-text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  margin-top: 0.6rem;
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    margin-top: 0.8rem;
+  }
+}
+
+.stages__card-features-list {
+  display: grid;
+  max-width: 55rem;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+  grid-row-gap: 1.6rem;
+  margin-top: 2.4rem;
+
+  @include breakpoint(mobile) {
+    max-width: none;
+    margin-top: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+}
+
+.stages__card-features-list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stages__card-features-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  @include breakpoint(mobile) {
+    gap: 0.6rem;
+  }
+}
+
+.stages__card-features-card-title {
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  gap: 0.6rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+  }
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    width: 2.4rem;
+    height: 0.8rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/stages-arrow.svg");
+  }
+}
+
+.stages__card-features-card-text {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+  }
+}

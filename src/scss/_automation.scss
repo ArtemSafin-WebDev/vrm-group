@@ -1,0 +1,156 @@
+.automation {
+  @include blockWrapper;
+  margin-bottom: 15rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 7.2rem;
+  }
+}
+
+.automation__content {
+  @include blockContent;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+  align-items: flex-start;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.7rem;
+  }
+}
+
+.automation__text-content {
+  display: flex;
+  flex-direction: column;
+
+  &::before {
+    content: "";
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/quotes.svg");
+    width: 8.8rem;
+    height: 7.3015rem;
+    margin-bottom: 4.9rem;
+
+    @include breakpoint(mobile) {
+      width: 3.9772rem;
+      height: 3.3rem;
+      margin-bottom: 2.4rem;
+    }
+  }
+}
+
+.automation__heading {
+  font-size: 5.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 115%;
+  max-width: 50rem;
+  margin-bottom: 1.6rem;
+
+  @include breakpoint(mobile) {
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%;
+    margin-bottom: 0.8rem;
+  }
+}
+
+.automation__text {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  max-width: 33rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    max-width: none;
+  }
+}
+
+.automation__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+  grid-row-gap: 2.8rem;
+  grid-auto-rows: minmax(22rem, 1fr);
+
+  @include breakpoint(mobile) {
+    grid-gap: 1rem;
+    grid-auto-rows: 1fr;
+  }
+}
+
+.automation__list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.automation__card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.8rem;
+  border: 1px solid #fff;
+  background: #fff;
+  box-shadow: -0.2rem -0.2rem 1.2rem 0rem rgba(8, 159, 124, 0.25),
+    0.2rem 0.2rem 1.2rem 0rem rgba(8, 159, 124, 0.25);
+  padding: 2.4rem;
+  padding-left: 4rem;
+  padding-right: 8.2rem;
+  background-image: url("../images/automation-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 5.6rem 100%;
+  flex-grow: 1;
+  gap: 1.4rem;
+  padding-top: 3rem;
+
+  @include breakpoint(mobile) {
+    border-radius: 0.6rem;
+
+    box-shadow: -0.0891rem -0.0891rem 0.5345rem 0rem rgba(8, 159, 124, 0.25),
+      0.0891rem 0.0891rem 0.5345rem 0rem rgba(8, 159, 124, 0.25);
+    gap: 0.5rem;
+    padding: 1.2rem;
+    padding-right: 0.4rem;
+    background-size: 2.6rem 100%;
+  }
+}
+
+.automation__card-amount {
+  font-size: 8.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  color: var(--primary-color);
+
+  @include breakpoint(mobile) {
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+  }
+}
+
+.automation__card-text {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+
+  @include breakpoint(mobile) {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%;
+  }
+}

@@ -1,0 +1,43 @@
+.news {
+  padding-top: 2.4rem;
+  margin-bottom: 15rem;
+  @include blockWrapper;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 7.2rem;
+    padding-top: 1.4rem;
+  }
+}
+
+.news__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.news__heading {
+  margin-bottom: 3.2rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.news__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+  margin-bottom: 5.6rem;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 1.4rem;
+    grid-auto-rows: 1fr;
+    margin-bottom: 4rem;
+  }
+}
+
+.news__list-item {
+  display: flex;
+  flex-direction: column;
+}

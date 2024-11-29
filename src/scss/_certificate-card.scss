@@ -1,0 +1,76 @@
+.certificate-card {
+  display: grid;
+  grid-template-columns: 10.2rem 1fr;
+  grid-gap: 1.6rem;
+  grid-template-areas: "icon content";
+  flex-grow: 1;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: 8rem 1fr;
+    grid-gap: 1.6rem;
+  }
+  &::before {
+    content: "";
+    width: 10.2rem;
+    height: 11rem;
+    background-image: url("../images/certificate.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include breakpoint(mobile) {
+      width: 8rem;
+      height: 8.6rem;
+      margin-bottom: 1.3rem;
+    }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
+
+.certificate-card__content {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  justify-content: space-between;
+
+  @include breakpoint(mobile) {
+    gap: 1.6rem;
+  }
+}
+
+.certificate-card__title {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+
+  @include breakpoint(mobile) {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+  }
+}
+
+.certificate-card__format {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  color: #a1a1a1;
+  margin-bottom: 0.8rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    margin-bottom: 0;
+  }
+}

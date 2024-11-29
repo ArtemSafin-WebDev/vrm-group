@@ -1,0 +1,45 @@
+.breadcrumbs {
+  display: block;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  margin-bottom: 5rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 3.2rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  a {
+    &::after {
+      content: "/";
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+
+    &.active {
+      color: #a1a1a1;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    &:not(.active) {
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+}

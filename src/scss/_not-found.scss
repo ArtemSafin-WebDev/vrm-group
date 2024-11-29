@@ -1,0 +1,87 @@
+.not-found {
+  @include blockWrapper;
+  padding-top: 2.4rem;
+  margin-bottom: 15rem;
+
+  @include breakpoint(mobile) {
+    padding-top: 1.4rem;
+    margin-bottom: 7.2rem;
+  }
+}
+
+.not-found__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.not-found__breadcrumbs {
+  margin-bottom: 8rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.not-found__text-content {
+  align-self: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.not-found__image {
+  display: block;
+  width: 45rem;
+  height: auto;
+  margin-bottom: 5.6rem;
+
+  @include breakpoint(mobile) {
+    width: 80%;
+    align-self: center;
+    margin-bottom: 3.2rem;
+  }
+}
+
+.not-found__heading {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  margin-bottom: 3.4rem;
+  @include breakpoint(mobile) {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    margin-bottom: 3.2rem;
+  }
+}
+
+.not-found__back-link {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 50rem;
+  background: var(--primary-color);
+  color: white;
+  padding: 1.6rem 3.7rem;
+  align-self: center;
+  box-shadow: -0.2rem -0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset,
+    0.2rem 0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset;
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  @include breakpoint(mobile) {
+    border-radius: 50rem;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    box-shadow: -0.2rem -0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset,
+      0.2rem 0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset;
+  }
+}

@@ -1,0 +1,132 @@
+.brand {
+  @include blockWrapper;
+  margin-bottom: 15rem;
+  padding-top: 2.4rem;
+
+  @include breakpoint(mobile) {
+    padding-top: 1.4rem;
+    margin-bottom: 7.2rem;
+  }
+}
+
+.brand__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand__breadcrumbs {
+  margin-bottom: 5rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.brand__heading {
+  margin-bottom: 4rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.brand__blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 12rem;
+
+  @include breakpoint(mobile) {
+    gap: 4rem;
+  }
+}
+
+.brand__block {
+  display: flex;
+  align-items: flex-start;
+  gap: 16rem;
+  @include breakpointMF(small-tablet) {
+    &:nth-child(even) {
+      .brand__block-image-wrapper {
+        order: -1;
+      }
+    }
+  }
+
+  @include breakpoint(mobile) {
+    gap: 2.4rem;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.brand__block-text-content {
+  width: 60rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  max-width: 100%;
+
+  @include breakpoint(mobile) {
+    width: auto;
+    gap: 1.2rem;
+  }
+}
+
+.brand__block-title {
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-top: -1rem;
+
+  @include breakpoint(mobile) {
+    margin: 0;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+.brand__block-text {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+
+  @include breakpoint(mobile) {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+  }
+}
+
+.brand__block-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  overflow: clip;
+  border-radius: 0.8rem;
+  width: 74rem;
+  max-width: 100%;
+
+  @include breakpoint(mobile) {
+    border-radius: 0.4rem;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 52.7%;
+  }
+}
+
+.brand__block-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

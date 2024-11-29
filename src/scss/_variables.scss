@@ -1,0 +1,12 @@
+:root {
+  --primary-color: #02c498;
+  --grey: #f8f8f8;
+  --text-color: #02211a;
+  --involve: "Involve", sans-serif;
+  --content-padding: 4rem;
+  --container-width: 150rem;
+
+  @include breakpoint(mobile) {
+    --content-padding: 2.4rem;
+  }
+}

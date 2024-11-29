@@ -1,0 +1,139 @@
+.intro {
+  padding-top: 1rem;
+  margin-bottom: 15rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 7rem;
+  }
+}
+
+.intro__wrapper {
+  @include blockWrapper;
+}
+
+.intro__wrapper-bg {
+  grid-column-start: main-start;
+  grid-column-end: main-end;
+  grid-row: 1 / 2;
+  display: block;
+}
+
+.intro__wrapper-inner {
+  @include blockContent;
+  grid-row: 1 / 2;
+  z-index: 5;
+  padding-top: 17rem;
+  padding-bottom: 17rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(mobile) {
+    padding-top: 10rem;
+    padding-bottom: 6.4rem;
+  }
+}
+
+.intro__wrapper-bg-card {
+  display: block;
+}
+
+.intro__wrapper-bg-card-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.intro__text-slider {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  .swiper {
+    margin: 0;
+    width: auto;
+    flex-grow: 1;
+  }
+}
+
+.intro__text-slider-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  @include breakpoint(mobile) {
+    max-width: none;
+  }
+}
+
+.intro__text-slider-card-title {
+  font-size: 6.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 115%;
+  text-transform: uppercase;
+  max-width: 59rem;
+  @include breakpoint(mobile) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%; /* 3.68rem */
+    text-transform: uppercase;
+  }
+}
+.intro__text-slider-card-text {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  max-width: 54rem;
+  @include breakpoint(mobile) {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+  }
+}
+
+.intro__pagination {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  margin-top: auto;
+  @include breakpoint(mobile) {
+    justify-content: center;
+    gap: 1.6rem;
+  }
+  .swiper-pagination-bullet {
+    width: 4.8rem;
+    height: 0.2rem;
+    border-radius: 0.8rem;
+    background-color: rgba(white, 0.5);
+    transition: background-color 0.2s;
+    cursor: pointer;
+    position: relative;
+    overflow: visible;
+
+    @include breakpoint(mobile) {
+      width: 3.2rem;
+      height: 0.2rem;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      inset: -1rem;
+      background-color: red;
+      z-index: 20;
+      opacity: 0;
+
+      @include breakpoint(mobile) {
+        inset: -0.5rem;
+      }
+    }
+
+    &.swiper-pagination-bullet-active {
+      background-color: white;
+      cursor: default;
+    }
+  }
+}
