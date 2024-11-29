@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-import { Pagination, EffectFade, Navigation, Controller } from "swiper/modules";
+import { Pagination, EffectFade, Controller } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
