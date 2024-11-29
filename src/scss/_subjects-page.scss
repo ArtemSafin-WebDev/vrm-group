@@ -1,0 +1,32 @@
+.subjects-page {
+  @include blockWrapper;
+  margin-bottom: 15rem;
+  padding-top: 2.4rem;
+
+  @include breakpoint(mobile) {
+    padding-top: 1.4rem;
+    margin-bottom: 7.2rem;
+  }
+}
+
+.subjects-page__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.subjects-page__breadcrumbs {
+  margin-bottom: 5rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.subjects-page__heading {
+  margin-bottom: 2.4rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 3.2rem;
+  }
+}

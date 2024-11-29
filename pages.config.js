@@ -8,6 +8,8 @@ import article from "./pages-data/article";
 import notFound from "./pages-data/404";
 import brand from "./pages-data/brand";
 import faq from "./pages-data/faq";
+import subjects from "./pages-data/subjects";
+import subjectsBasic from "./pages-data/subjectsBasic";
 
 const pagesConfig = {
   ...home,
@@ -20,6 +22,8 @@ const pagesConfig = {
   ...notFound,
   ...brand,
   ...faq,
+  ...subjects,
+  ...subjectsBasic,
 };
 
 export default pagesConfig;
