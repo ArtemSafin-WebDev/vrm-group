@@ -19,8 +19,10 @@ import equipment from "./equipment";
 import productGallery from "./productGallery";
 import simpleCounter from "./simpleCounter";
 import labSlider from "./labSlider";
+import menu from "./menu";
 
 document.addEventListener("DOMContentLoaded", () => {
+  menu();
   fileUpload();
   selects();
   modals();

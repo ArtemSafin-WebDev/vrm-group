@@ -63,7 +63,7 @@
     font-size: 1.6rem;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 1.3;
 
     @include breakpoint(mobile) {
       font-size: 1.4rem;
