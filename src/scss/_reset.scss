@@ -16,7 +16,7 @@ html {
   font-size: clamp(2px, 0.52vw, 125px);
   scrollbar-gutter: stable;
   scroll-behavior: smooth;
-  scroll-padding-top: 10rem;
+  scroll-padding-top: 2rem;
   @include breakpoint(mobile) {
     font-size: 10px;
   }
@@ -235,4 +235,5 @@ select:-webkit-autofill:focus {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  overflow-x: clip;
 }

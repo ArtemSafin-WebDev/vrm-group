@@ -82,6 +82,16 @@
       padding-bottom: 61.1%;
     }
   }
+
+  &--industry {
+    &::before {
+      padding-bottom: 63.8%;
+
+      @include breakpoint(mobile) {
+        padding-bottom: 63.8%;
+      }
+    }
+  }
 }
 
 .catalog__categories-card-image {
@@ -100,6 +110,7 @@
   flex-direction: column;
   z-index: 5;
   gap: 2rem;
+  padding-top: 2.4rem;
 
   @include breakpoint(mobile) {
     padding: 2.4rem;
@@ -110,12 +121,12 @@
   font-size: 2.4rem;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 1.3;
   @include breakpoint(mobile) {
     font-size: 2rem;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    line-height: 1.3;
   }
 }
 

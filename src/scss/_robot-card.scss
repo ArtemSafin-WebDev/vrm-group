@@ -18,6 +18,31 @@
   overflow: hidden;
   backface-visibility: hidden;
   min-height: 45.9rem;
+  transition: box-shadow 0.2s;
+  &--green {
+    background-image: url("../images/robot-green-card.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    &:link,
+    &:visited {
+      color: white;
+    }
+
+    .robot-card__arrow {
+      border-color: white;
+      background-color: white;
+
+      svg {
+        fill: #02211a;
+      }
+    }
+
+    .robot-card__price {
+      color: white;
+    }
+  }
 
   @include breakpoint(mobile) {
     padding: 0.8rem;
@@ -45,7 +70,7 @@
     opacity: 0;
   }
   @media (hover: hover) and (pointer: fine) {
-    &:hover {
+    &:not(.robot-card--green):hover {
       &::before {
         opacity: 1;
       }
@@ -54,6 +79,20 @@
         background-color: transparent;
         svg {
           fill: var(--primary-color);
+        }
+      }
+    }
+
+    &.robot-card--green:hover {
+      box-shadow: -0.3rem -0.3rem 1.6rem 0rem rgba(8, 159, 124, 0.25),
+        0.3rem 0.3rem 1.6rem 0rem rgba(8, 159, 124, 0.25),
+        -0.2rem -0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset,
+        0.2rem 0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset;
+
+      .robot-card__arrow {
+        background-color: transparent;
+        svg {
+          fill: white;
         }
       }
     }

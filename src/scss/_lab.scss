@@ -1,0 +1,401 @@
+.lab {
+  @include blockWrapper;
+  margin-bottom: 8rem;
+  padding-top: 2.4rem;
+
+  @include breakpoint(mobile) {
+    padding-top: 1.4rem;
+    margin-bottom: 8rem;
+  }
+}
+
+.lab__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.lab__breadcrumbs {
+  margin-bottom: 5rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.lab__heading {
+  margin-bottom: 3.2rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2.4rem;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%;
+    text-transform: uppercase;
+  }
+}
+
+.lab__wrapper {
+  border-radius: 0.8rem;
+  background: #fff;
+  box-shadow: -0.2rem -0.2rem 1.2rem 0rem rgba(8, 159, 124, 0.25),
+    0.2rem 0.2rem 1.2rem 0rem rgba(8, 159, 124, 0.25),
+    -0.2rem -0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset,
+    0.2rem 0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+
+  @include breakpoint(mobile) {
+    padding: 3.2rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    overflow: hidden;
+  }
+}
+
+.lab__secondary-heading {
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.3;
+  padding-left: 1.6rem;
+  margin-top: 1.6rem;
+
+  @include breakpoint(mobile) {
+    padding: 0;
+    margin: 0;
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+  }
+}
+
+.lab__heading-text {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-top: 2.4rem;
+  padding-left: 1.6rem;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.lab__row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 26rem);
+  grid-gap: 4rem;
+  margin-top: 2.4rem;
+
+  @include breakpoint(mobile) {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.lab__left-col {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+.lab__right-col {
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.lab__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.lab__list-item {
+  &::before {
+    display: none;
+  }
+  &:nth-child(odd) {
+    background-color: #f8f8f8;
+  }
+}
+
+.lab__card {
+  padding: 1.4rem 0;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 0.8fr 1fr;
+
+  @include breakpoint(mobile) {
+    padding: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}
+
+.lab__card-title {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  padding-left: 1.6rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    padding: 0;
+    line-height: 140%;
+  }
+  &::before {
+    content: counter(ordered-list) ".";
+  }
+}
+
+.lab__card-robot {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+  }
+}
+
+.lab__card-price {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  padding-right: 1.6rem;
+
+  @include breakpoint(mobile) {
+    padding: 0;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+    margin-top: 1.2rem;
+  }
+}
+
+.lab__controls {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 0.8fr 1fr;
+  margin-top: 4rem;
+  align-items: center;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3.2rem;
+    margin-top: 2.4rem;
+  }
+}
+
+.lab__buy-link {
+  grid-column: 1 / 2;
+  justify-self: flex-start;
+  padding-right: 4.2rem;
+  padding-left: 4.2rem;
+  @include breakpoint(mobile) {
+    align-self: stretch;
+    order: 10;
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+  }
+}
+
+.lab__price {
+  grid-column: 3 / 4;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.3;
+
+  @include breakpoint(mobile) {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
+
+.lab__slider {
+  margin-top: 12.6rem;
+
+  @include breakpoint(mobile) {
+    margin-top: 4rem;
+    order: 50;
+  }
+
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-wrapper {
+    @include breakpointMF(small-tablet) {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-gap: 2.4rem;
+    }
+  }
+
+  .swiper-slide {
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+      width: 24rem;
+      margin-right: 2.4rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.lab__info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  @include breakpointMF(small-tablet) {
+    position: sticky;
+    top: 2rem;
+    left: 0;
+  }
+
+  @include breakpoint(mobile) {
+    gap: 1.6rem;
+    margin-top: 4rem;
+  }
+}
+
+.lab__info-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3;
+
+  @include breakpoint(mobile) {
+    width: 3.2rem;
+    height: 3.2rem;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.3;
+  }
+}
+
+.lab__info-text {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+  }
+}
+
+.lab__slider-controls {
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+  display: none;
+
+  @include breakpoint(mobile) {
+    justify-content: space-between;
+    gap: 2rem;
+    display: flex;
+    margin-top: 2.8rem;
+  }
+}
+
+.lab__slider-arrows {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+
+  @include breakpoint(mobile) {
+    order: 40;
+  }
+}
+
+.lab__slider-arrow {
+  flex-shrink: 0;
+  width: 5.6rem;
+  height: 5.6rem;
+  border: 1px solid #a1a1a1;
+  border-radius: 50%;
+  transition: opacity 0.2s;
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: #a1a1a1;
+  }
+
+  &.swiper-button-disabled {
+    cursor: default;
+
+    @include breakpoint(mobile) {
+      opacity: 0.5;
+    }
+  }
+
+  &:not(.swiper-button-disabled) {
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.lab__slider-pagination {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  display: flex;
+  align-items: baseline;
+  gap: 0rem;
+  .swiper-pagination-current {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--primary-color);
+  }
+}

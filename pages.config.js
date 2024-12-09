@@ -17,6 +17,9 @@ import education from "./pages-data/education";
 import robotsCatalog from "./pages-data/robotsCatalog";
 import industrialRobots from "./pages-data/industrialRobots";
 import robot from "./pages-data/robot";
+import industrySubcategory from "./pages-data/industrySubcategory";
+import industryCategory from "./pages-data/industryCategory";
+import lab from "./pages-data/lab";
 
 const pagesConfig = {
   ...home,
@@ -38,6 +41,9 @@ const pagesConfig = {
   ...robotsCatalog,
   ...industrialRobots,
   ...robot,
+  ...industrySubcategory,
+  ...industryCategory,
+  ...lab,
 };
 
 export default pagesConfig;

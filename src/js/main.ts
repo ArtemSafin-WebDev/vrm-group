@@ -18,6 +18,7 @@ import catalog from "./catalog";
 import equipment from "./equipment";
 import productGallery from "./productGallery";
 import simpleCounter from "./simpleCounter";
+import labSlider from "./labSlider";
 
 document.addEventListener("DOMContentLoaded", () => {
   fileUpload();
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
   equipment();
   productGallery();
   simpleCounter();
+  labSlider();
 });
 
 window.addEventListener("load", () => {
