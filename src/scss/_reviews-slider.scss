@@ -1,0 +1,126 @@
+.reviews-slider {
+  @include blockWrapper;
+  margin-bottom: 15rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 7rem;
+  }
+}
+
+.reviews-slider__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews-slider__heading {
+  font-size: 5.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 115%;
+  margin-bottom: 2.4rem;
+
+  @include breakpoint(mobile) {
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%;
+  }
+}
+
+.reviews-slider__wrapper {
+  margin-bottom: 4.8rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2.4rem;
+  }
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    margin-right: 2.4rem;
+    width: 73.8rem;
+    box-sizing: border-box;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+      width: 24rem;
+      margin-right: 0.9rem;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.reviews-slider__controls {
+  display: flex;
+  align-items: center;
+  gap: 4.8rem;
+
+  @include breakpoint(mobile) {
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
+
+.reviews-slider__arrows {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+
+  @include breakpoint(mobile) {
+    order: 40;
+  }
+}
+
+.reviews-slider__arrow {
+  flex-shrink: 0;
+  width: 5.6rem;
+  height: 5.6rem;
+  border: 1px solid #a1a1a1;
+  border-radius: 50%;
+  transition: opacity 0.2s;
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: #a1a1a1;
+  }
+
+  &.swiper-button-disabled {
+    cursor: default;
+
+    @include breakpoint(mobile) {
+      opacity: 0.5;
+    }
+  }
+
+  &:not(.swiper-button-disabled) {
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.reviews-slider__pagination {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  display: flex;
+  align-items: baseline;
+  gap: 0rem;
+  .swiper-pagination-current {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: var(--primary-color);
+  }
+}

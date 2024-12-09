@@ -1,0 +1,93 @@
+<section class="has-questions">
+    <div class="has-questions__content">
+        <div class="has-questions__left-col">
+            <h2 class="has-questions__heading">
+                Остались вопросы?
+            </h2>
+            <div class="has-questions__text">
+                Оставьте заявку, и мы вам перезвоним
+            </div>
+            <form action="/" method="POST" class="has-questions__form">
+                <div class="has-questions__form-fields">
+                    <div class="has-questions__form-field">
+                        <input type="text" name="your-name" class="text-input" required="" placeholder="Имя*">
+                    </div>
+                    <div class="has-questions__form-field">
+                        <input type="tel" name="your-phone" class="text-input" required="" placeholder="Телефон*">
+                    </div>
+                    <div class="has-questions__form-field">
+                        <input type="text" name="your-text" class="text-input" required=""
+                            placeholder="Текст сообщения">
+                    </div>
+                    <div class="has-questions__form-field">
+                        <div class="select js-select" data-placeholder="Способ связи">
+                            <button class="select__btn" type="button">
+                                <span class="select__btn-text js-btn-text">
+
+                                </span>
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#select-arrow"></use>
+                                </svg>
+                            </button>
+                            <div class="select__dropdown">
+                                <div class="select__dropdown-inner">
+                                    <ul class="select__choices-list">
+                                        <li class="select__choices-list-item">
+                                            <label class="select__choice">
+                                                <input type="radio" name="contact-way" class="select__choice-input"
+                                                    value="Телефон">
+                                                <span class="select__choice-content">
+                                                    Телефон
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="select__choices-list-item">
+                                            <label class="select__choice">
+                                                <input type="radio" name="contact-way" class="select__choice-input"
+                                                    value="Telegram">
+                                                <span class="select__choice-content">
+                                                    Telegram
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="select__choices-list-item">
+                                            <label class="select__choice">
+                                                <input type="radio" name="contact-way" class="select__choice-input"
+                                                    value="What’s App">
+                                                <span class="select__choice-content">
+                                                    What’s App
+                                                </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <label class="has-questions__file-upload js-file-upload">
+                    <input type="file" class="has-questions__file-upload-input">
+                    <span class="has-questions__file-upload-text js-file-upload-text">
+                        Прикрепить файл
+                    </span>
+                    <svg width="14" height="14" aria-hidden="true">
+                        <use xlink:href="#file"></use>
+                    </svg>
+                </label>
+                <div class="has-questions__controls">
+                    <button class="btn has-questions__submit" type="submit">
+                        Оставить заявку
+                    </button>
+                    <div class="has-questions__policy">
+                        Я согласен (-на) с политикой конфиденциальности
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="has-questions__right-col">
+            <div class="has-questions__image-wrapper">
+                <img src="/images/has-questions-3.webp" alt="" class="has-questions__image">
+            </div>
+        </div>
+    </div>
+</section>

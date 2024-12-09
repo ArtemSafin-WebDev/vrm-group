@@ -15,7 +15,7 @@ export default function projectCards() {
       spaceBetween: 0,
       longSwipesRatio: 0.2,
       modules: [Pagination, EffectFade],
-      allowTouchMove: false,
+      allowTouchMove: true,
       effect: "fade",
       fadeEffect: {
         crossFade: false,

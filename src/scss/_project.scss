@@ -1,0 +1,137 @@
+.project {
+  @include blockWrapper;
+  margin-bottom: 15rem;
+  padding-top: 2.4rem;
+
+  @include breakpoint(mobile) {
+    padding-top: 1.4rem;
+    margin-bottom: 7.2rem;
+  }
+}
+
+.project__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.project__breadcrumbs {
+  margin-bottom: 8rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.project__heading {
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.3;
+  text-wrap: balance;
+  margin-bottom: 3.2rem;
+
+  @include breakpoint(mobile) {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 2.4rem;
+  }
+}
+
+.project__info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  margin-bottom: 4.8rem;
+
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    align-items: stretch;
+    margin-bottom: 3.2rem;
+    flex-wrap: nowrap;
+    gap: 0.8rem;
+  }
+}
+
+.project__info-card {
+  padding: 2.8rem;
+  border-radius: 0.4rem;
+  background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: 35.7rem;
+
+  @include breakpoint(mobile) {
+    width: auto;
+    padding: 1.8rem 2.7rem;
+  }
+}
+
+.project__info-card-title {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+  }
+}
+
+.project__info-card-value {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  color: #a1a1a1;
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+  }
+}
+
+.project__text-content {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  max-width: 112rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+  }
+
+  p {
+    margin-top: 1.4rem;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+.project__gallery-slider-wrapper {
+  margin: 4rem 0;
+
+  @include breakpoint(mobile) {
+    margin: 2.4rem 0;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

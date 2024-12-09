@@ -92,7 +92,10 @@
       0.0583rem 0.0583rem 0.3496rem 0rem rgba(8, 159, 124, 0.25),
       -0.0583rem -0.0583rem 0.0583rem 0rem rgba(255, 255, 255, 0.25) inset,
       0.0583rem 0.0583rem 0.0583rem 0rem rgba(255, 255, 255, 0.25) inset;
-    // min-height: 18.6rem;
+
+    .projects__list-item & {
+      min-height: 15.6rem;
+    }
   }
 }
 

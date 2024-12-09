@@ -1,6 +1,6 @@
 const about = {
   "/about.html": {
-    title: "Отзывы",
+    title: "О компании",
   },
 };
 

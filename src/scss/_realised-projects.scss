@@ -137,34 +137,13 @@
 
 .realised-projects__show-all {
   margin-left: auto;
-  border-radius: 50rem;
-  background: var(--primary-color);
-  font-size: 1.8rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  flex-shrink: 0;
-  text-align: center;
-  padding: 1.4rem 7.6rem;
-  box-shadow: -0.2rem -0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset,
-    0.2rem 0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset;
-  color: white;
-  &:link,
-  &:visited {
-    color: white;
-  }
+  padding-left: 7.6rem;
+  padding-right: 7.6rem;
 
   @include breakpoint(mobile) {
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
     margin: 0;
-    font-size: 1.8rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    padding: 1.4rem 3.2rem;
-    border-radius: 22.9rem;
-    box-shadow: -0.2rem -0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset,
-      0.2rem 0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset;
     align-self: stretch;
-    text-align: center;
   }
 }

@@ -391,44 +391,10 @@
 }
 
 .page-footer__callback-btn {
-  padding: 1.4rem 6.2rem;
-  border-radius: 30rem;
-  background: var(--primary-color);
-
-  box-shadow: -0.2rem -0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset,
-    0.2rem 0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset;
-  transition: all 0.2s;
-  font-size: 1.8rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  color: white;
+  padding-left: 6.2rem;
+  padding-right: 6.2rem;
   align-self: flex-start;
-  text-align: center;
-  &:link,
-  &:visited {
-    color: white;
-  }
-
-  // @media (hover: hover) {
-  //   &:hover {
-  //     border-color: var(--primary-color);
-  //     color: var(--primary-color);
-  //     background-color: transparent;
-  //     box-shadow: -0.2rem -0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset,
-  //       0.2rem 0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset;
-  //   }
-  // }
-
   @include breakpoint(mobile) {
-    box-shadow: -0.2rem -0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset,
-      0.2rem 0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset;
-
     align-self: stretch;
-    margin: 0;
-    font-size: 1.8rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
   }
 }

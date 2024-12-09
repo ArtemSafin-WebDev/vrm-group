@@ -10,6 +10,13 @@ import brand from "./pages-data/brand";
 import faq from "./pages-data/faq";
 import subjects from "./pages-data/subjects";
 import subjectsBasic from "./pages-data/subjectsBasic";
+import contacts from "./pages-data/contacts";
+import projects from "./pages-data/projects";
+import project from "./pages-data/project";
+import education from "./pages-data/education";
+import robotsCatalog from "./pages-data/robotsCatalog";
+import industrialRobots from "./pages-data/industrialRobots";
+import robot from "./pages-data/robot";
 
 const pagesConfig = {
   ...home,
@@ -24,6 +31,13 @@ const pagesConfig = {
   ...faq,
   ...subjects,
   ...subjectsBasic,
+  ...contacts,
+  ...projects,
+  ...project,
+  ...education,
+  ...robotsCatalog,
+  ...industrialRobots,
+  ...robot,
 };
 
 export default pagesConfig;

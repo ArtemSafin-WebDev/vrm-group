@@ -1,0 +1,29 @@
+.about-gallery {
+  @include blockWrapper;
+  margin-bottom: 9.7rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 7rem;
+  }
+}
+
+.about-gallery__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-gallery__heading {
+  font-size: 5.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 115%;
+  margin-bottom: 2.4rem;
+
+  @include breakpoint(mobile) {
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 115%;
+  }
+}

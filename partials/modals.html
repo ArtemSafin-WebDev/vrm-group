@@ -1,0 +1,84 @@
+<div class="modal js-modal" id="callback-modal">
+    <div class="modal__inner">
+        <button class="modal__close js-modal-close">
+            <svg width="14" height="14" aria-hidden="true">
+                <use xlink:href="#modal-close"></use>
+            </svg>
+        </button>
+        <div class="modal__callback">
+            <h3 class="modal__callback-heading">
+                Оставьте заявку
+            </h3>
+            <div class="modal__callback-text">
+                Оставьте заявку, и мы вам перезвоним
+            </div>
+            <form action="/" method="POST" class="modal__form">
+                <div class="modal__form-fields">
+                    <div class="modal__form-field">
+                        <input type="text" name="your-name" class="text-input" required="" placeholder="Имя*">
+                    </div>
+                    <div class="modal__form-field">
+                        <input type="tel" name="your-phone" class="text-input" required="" placeholder="Телефон*">
+                    </div>
+                    <div class="modal__form-field">
+                        <input type="text" name="your-text" class="text-input" required=""
+                            placeholder="Текст сообщения">
+                    </div>
+                    <div class="modal__form-field">
+                        <div class="select js-select" data-placeholder="Способ связи">
+                            <button class="select__btn" type="button">
+                                <span class="select__btn-text js-btn-text">
+
+                                </span>
+                                <svg width="14" height="14" aria-hidden="true">
+                                    <use xlink:href="#select-arrow"></use>
+                                </svg>
+                            </button>
+                            <div class="select__dropdown">
+                                <div class="select__dropdown-inner">
+                                    <ul class="select__choices-list">
+                                        <li class="select__choices-list-item">
+                                            <label class="select__choice">
+                                                <input type="radio" name="contact-way" class="select__choice-input"
+                                                    value="Телефон">
+                                                <span class="select__choice-content">
+                                                    Телефон
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="select__choices-list-item">
+                                            <label class="select__choice">
+                                                <input type="radio" name="contact-way" class="select__choice-input"
+                                                    value="Telegram">
+                                                <span class="select__choice-content">
+                                                    Telegram
+                                                </span>
+                                            </label>
+                                        </li>
+                                        <li class="select__choices-list-item">
+                                            <label class="select__choice">
+                                                <input type="radio" name="contact-way" class="select__choice-input"
+                                                    value="What’s App">
+                                                <span class="select__choice-content">
+                                                    What’s App
+                                                </span>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__form-controls">
+                    <button class="btn modal__form-submit" type="submit">
+                        Оставить заявку
+                    </button>
+                    <div class="modal__form-policy">
+                        Я согласен (-на) с политикой конфиденциальности
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+.btn {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 22.9rem;
+  background: var(--primary-color);
+  box-shadow: -0.2rem -0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset,
+    0.2rem 0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset;
+  color: white;
+  flex-shrink: 0;
+  transition: background-color 0.2s, box-shadow 0.2s, color 0.2s;
+  padding: 1.5rem 3.2rem;
+  align-self: stretch;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  isolation: isolate;
+  white-space: nowrap;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 1px solid var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: -1;
+    pointer-events: none;
+    border-radius: 22.9rem;
+  }
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--primary-color);
+      background-color: transparent;
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  @include breakpoint(mobile) {
+    padding: 1.5rem 3.2rem;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}

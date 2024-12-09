@@ -53,13 +53,13 @@
   font-size: 4rem;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
+  line-height: 1.35;
 
   @include breakpoint(mobile) {
     font-size: 2.4rem;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
+    line-height: 1.35;
   }
 }
 
@@ -176,37 +176,12 @@
 }
 
 .has-questions__submit {
-  font-size: 1.8rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  padding: 1.4rem 6.4rem;
-  flex-shrink: 0;
-  font-size: 1.8rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  color: white;
-  border-radius: 50rem;
-  background: var(--primary-color);
-  flex-shrink: 0;
-  white-space: nowrap;
-  box-shadow: -0.2rem -0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset,
-    0.2rem 0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset;
-  text-align: center;
-  justify-content: center;
+  padding-left: 6.4rem;
+  padding-right: 6.4rem;
 
   @include breakpoint(mobile) {
-    padding: 1.4rem 3.2rem;
-    font-size: 1.8rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    border-radius: 50rem;
-    background: var(--primary-color);
-    color: white;
-    box-shadow: -0.2rem -0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset,
-      0.2rem 0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset;
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
   }
 }
 

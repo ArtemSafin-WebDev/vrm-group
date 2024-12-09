@@ -1,0 +1,58 @@
+.equipment {
+  @include blockWrapper;
+  margin-bottom: 15rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 7rem;
+  }
+}
+
+.equipment__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.equipment__heading {
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 3.2rem;
+
+  @include breakpoint(mobile) {
+    font-size: 3.2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 2.4rem;
+  }
+}
+
+.equipment__slider {
+  .swiper {
+    overflow: visible;
+  }
+  .swiper-wrapper {
+    @include breakpointMF(small-tablet) {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-gap: 2.4rem;
+    }
+  }
+
+  .swiper-slide {
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(mobile) {
+      width: 24rem;
+      margin-right: 2.4rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

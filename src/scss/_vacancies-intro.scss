@@ -1,0 +1,175 @@
+.vacancies-intro {
+  margin-bottom: 15rem;
+  padding-top: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  @include breakpoint(mobile) {
+    padding-top: 1.4rem;
+    margin-bottom: 7.2rem;
+  }
+}
+
+.vacancies-intro__top {
+  @include blockWrapper;
+}
+
+.vacancies-intro__top-content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.vacancies-intro__breadcrumbs {
+  margin-bottom: 0;
+}
+.vacancies-intro__bottom {
+  @include blockWrapper;
+}
+
+.vacancies-intro__bottom-card-wrapper {
+  filter: drop-shadow(-0.2rem -0.2rem 1.2rem rgba(8, 159, 124, 0.25))
+    drop-shadow(0.2rem 0.2rem 1.2rem rgba(8, 159, 124, 0.25));
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+
+  picture {
+    display: contents;
+  }
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+
+    filter: drop-shadow(0.2rem 0.2rem 0.6rem rgba(8, 159, 124, 0.25))
+      drop-shadow(-0.2rem -0.2rem 0.6rem rgba(8, 159, 124, 0.25));
+  }
+}
+
+.vacancies-intro__bottom-content {
+  @include blockContent;
+  grid-row: 1 / 2;
+  z-index: 5;
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    &::after {
+      content: "";
+      display: block;
+      margin-top: auto;
+      aspect-ratio: 375 / 258;
+    }
+  }
+}
+
+.vacancies-intro__text-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 55rem;
+
+  @include breakpoint(mobile) {
+    max-width: none;
+    padding-top: 10rem;
+    padding-bottom: 2.4rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.vacancies-intro__heading {
+  margin-bottom: 2rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.vacancies-intro__large-text {
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.3;
+
+  @include breakpoint(mobile) {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1.6rem;
+  }
+}
+
+.vacancies-intro__text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+  }
+  p {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.vacancies-intro__bottom-card {
+  @include breakpointMF(small-tablet) {
+    background: #f8f8f8;
+    aspect-ratio: 1888 / 641;
+    margin: 0 1.6rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -webkit-mask-image: url("../images/vacancies-mask.svg");
+    mask-image: url("../images/vacancies-mask.svg");
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: none;
+    mask-repeat: no-repeat;
+  }
+
+  @include breakpoint(mobile) {
+    background: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    -webkit-mask-image: url("../images/vacancies-mask-mobile.svg");
+    mask-image: url("../images/vacancies-mask-mobile.svg");
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: none;
+    mask-repeat: no-repeat;
+    flex-grow: 1;
+  }
+}
+
+.vacancies-intro__image {
+  @include breakpointMF(small-tablet) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    object-fit: cover;
+    align-self: stretch;
+    justify-self: stretch;
+    border-radius: 0.8rem;
+  }
+
+  @include breakpoint(mobile) {
+    aspect-ratio: 375 / 258;
+    border-radius: 0.8rem;
+    margin-top: auto;
+  }
+}

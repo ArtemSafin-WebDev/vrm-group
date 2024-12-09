@@ -15,6 +15,7 @@ export default function realisedProjects() {
       slidesPerView: "auto",
       speed: 600,
       modules: [Pagination, Navigation],
+      allowTouchMove: false,
       pagination: {
         el: element.querySelector<HTMLElement>(
           ".realised-projects__slider-pagination"

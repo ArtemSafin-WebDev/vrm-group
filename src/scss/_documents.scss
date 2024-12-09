@@ -2,8 +2,15 @@
   @include blockWrapper;
   margin-bottom: 15rem;
 
+  &--robot {
+    margin-bottom: 5.6rem;
+  }
+
   @include breakpoint(mobile) {
     margin-bottom: 7.2rem;
+    &--robot {
+      margin-bottom: 5.3rem;
+    }
   }
 }
 
@@ -18,12 +25,27 @@
   line-height: 115%;
   margin-bottom: 3.2rem;
 
+  &--small {
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 2.4rem;
+  }
+
   @include breakpoint(mobile) {
     font-size: 2.8rem;
     font-style: normal;
     font-weight: 700;
     line-height: 115%;
     margin-bottom: 3.2rem;
+    &--small {
+      font-size: 3.2rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 2.4rem;
+    }
   }
 }
 
