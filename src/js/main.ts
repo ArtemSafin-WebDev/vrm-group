@@ -20,6 +20,7 @@ import productGallery from "./productGallery";
 import simpleCounter from "./simpleCounter";
 import labSlider from "./labSlider";
 import menu from "./menu";
+import options from "./options";
 
 document.addEventListener("DOMContentLoaded", () => {
   menu();
@@ -43,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
   productGallery();
   simpleCounter();
   labSlider();
+  options();
 });
 
 window.addEventListener("load", () => {

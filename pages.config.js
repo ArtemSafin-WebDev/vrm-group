@@ -20,6 +20,7 @@ import robot from "./pages-data/robot";
 import industrySubcategory from "./pages-data/industrySubcategory";
 import industryCategory from "./pages-data/industryCategory";
 import lab from "./pages-data/lab";
+import completeSolution from "./pages-data/completeSolution";
 
 const pagesConfig = {
   ...home,
@@ -44,6 +45,7 @@ const pagesConfig = {
   ...industrySubcategory,
   ...industryCategory,
   ...lab,
+  ...completeSolution,
 };
 
 export default pagesConfig;
