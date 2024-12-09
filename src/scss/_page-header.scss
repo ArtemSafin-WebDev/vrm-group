@@ -422,6 +422,9 @@
     z-index: 50;
     padding-top: 0.8rem;
     width: max-content;
+    body:not(.loaded) & {
+      display: none;
+    }
   }
 
   @include breakpoint(mobile) {
@@ -535,6 +538,9 @@
     visibility: hidden;
     transition: opacity 0.2s, visibility 0s linear 0.2s;
     z-index: 30;
+    body:not(.loaded) & {
+      display: none;
+    }
   }
 
   @include breakpoint(mobile) {

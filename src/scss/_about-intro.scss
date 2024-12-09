@@ -1,0 +1,307 @@
+.about-intro {
+  margin-bottom: 15rem;
+  padding-top: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  @include breakpoint(mobile) {
+    padding-top: 1.4rem;
+    margin-bottom: 7.2rem;
+  }
+}
+
+.about-intro__top {
+  @include blockWrapper;
+}
+
+.about-intro__top-content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-intro__breadcrumbs {
+  margin-bottom: 0;
+}
+.about-intro__bottom {
+  @include blockWrapper;
+}
+
+.about-intro__bottom-card-wrapper {
+  filter: drop-shadow(-0.2rem -0.2rem 1.2rem rgba(8, 159, 124, 0.25))
+    drop-shadow(0.2rem 0.2rem 1.2rem rgba(8, 159, 124, 0.25));
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+
+  picture {
+    display: contents;
+  }
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+
+    filter: drop-shadow(0.2rem 0.2rem 0.6rem rgba(8, 159, 124, 0.25))
+      drop-shadow(-0.2rem -0.2rem 0.6rem rgba(8, 159, 124, 0.25));
+  }
+}
+
+.about-intro__bottom-content {
+  @include blockContent;
+  grid-row: 1 / 2;
+  z-index: 5;
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+  align-items: center;
+  color: white;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    align-items: stretch;
+    gap: 3.2rem;
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+  }
+}
+
+.about-intro__text-content {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / 9;
+
+  @include breakpoint(mobile) {
+    max-width: none;
+  }
+}
+
+.about-intro__heading {
+  margin-bottom: 3.2rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.about-intro__text {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  margin-bottom: 5rem;
+  max-width: 88rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    margin-bottom: 3.2rem;
+  }
+}
+
+.about-intro__numbers-title {
+  font-size: 3.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+
+  @include breakpoint(mobile) {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1.2rem;
+  }
+}
+
+.about-intro__numbers-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 2.4rem;
+  }
+}
+
+.about-intro__numbers-list-item {
+  &::before {
+    display: none;
+  }
+}
+
+.about-intro__numbers-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-intro__numbers-card-amount {
+  font-size: 8.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+
+  @include breakpoint(mobile) {
+    font-size: 8.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+  }
+  &::before {
+    content: counter(ordered-list, decimal-leading-zero);
+  }
+}
+
+.about-intro__numbers-card-text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+  }
+}
+.about-intro__bottom-card {
+  @include breakpointMF(small-tablet) {
+    background: var(--primary-color);
+    aspect-ratio: 1888 / 747;
+    margin: 0 1.6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -webkit-mask-image: url("../images/vacancies-mask.svg");
+    mask-image: url("../images/vacancies-mask.svg");
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: none;
+    mask-repeat: no-repeat;
+    position: relative;
+  }
+
+  @include breakpoint(mobile) {
+    background: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    -webkit-mask-image: url("../images/about-intro-mobile-mask.svg");
+    mask-image: url("../images/about-intro-mobile-mask.svg");
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: none;
+    mask-repeat: no-repeat;
+    flex-grow: 1;
+    position: relative;
+  }
+}
+
+.about-intro__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-intro__quote-card {
+  grid-column: 9 / -1;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem;
+
+  color: var(--text-color);
+  border-radius: 0.8rem;
+  background: #f8f8f8;
+  padding-top: 7.4rem;
+  padding-right: 10rem;
+  box-shadow: -0.2rem -0.2rem 1.2rem 0rem rgba(8, 159, 124, 0.25),
+    0.2rem 0.2rem 1.2rem 0rem rgba(8, 159, 124, 0.25),
+    -0.2rem -0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset,
+    0.2rem 0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset;
+  background-image: url("../images/about-quote-decor.svg");
+  background-repeat: repeat-y;
+  background-size: 6rem 22.2709rem;
+  background-position: right top;
+
+  @include breakpoint(mobile) {
+    padding: 2.4rem;
+    border-radius: 0.8rem;
+    box-shadow: -0.2rem -0.2rem 1.2rem 0rem rgba(8, 159, 124, 0.25),
+      0.2rem 0.2rem 1.2rem 0rem rgba(8, 159, 124, 0.25),
+      -0.2rem -0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset,
+      0.2rem 0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset;
+    padding-top: 4rem;
+    padding-right: 5.6rem;
+    background-image: url("../images/about-quote-decor-mobile.svg");
+    background-size: 3.2rem 22.2709rem;
+  }
+
+  &::before {
+    content: "";
+    width: 8.8rem;
+    height: 7.3015rem;
+    margin-bottom: 2.1rem;
+    background-image: url("../images/quotes.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @include breakpoint(mobile) {
+      width: 6.4rem;
+      height: 5.4rem;
+      margin-bottom: 1.6rem;
+    }
+  }
+}
+
+.about-intro__quote-card-text {
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 3.2rem;
+
+  @include breakpoint(mobile) {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 2.4rem;
+  }
+}
+
+.about-intro__quote-card-image-wrapper {
+  position: relative;
+  border-radius: 0.8rem;
+  overflow: hidden;
+
+  @include breakpoint(mobile) {
+    border-radius: 0.5744rem;
+  }
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 56%;
+  }
+}
+
+.about-intro__quote-card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

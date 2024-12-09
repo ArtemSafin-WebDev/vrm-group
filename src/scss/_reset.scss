@@ -249,6 +249,9 @@ select:-webkit-autofill:focus {
   transition: opacity 0.2s, visibility 0s linear 0.2s;
   opacity: 0;
   visibility: hidden;
+  body:not(.loaded) & {
+    display: none;
+  }
 
   body:has(.page-header__nav-list-item--catalog:hover) & {
     opacity: 1;

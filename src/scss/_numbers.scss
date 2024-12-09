@@ -1,0 +1,88 @@
+.numbers {
+  @include blockWrapper;
+  margin-bottom: 15rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 7rem;
+  }
+}
+
+.numbers__content {
+  @include blockContent;
+}
+
+.numbers__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+  @include breakpoint(mobile) {
+    grid-gap: 1rem;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.numbers__list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.numbers__card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.8rem;
+  border: 1px solid #fff;
+  background: #fff;
+  box-shadow: -0.2rem -0.2rem 1.2rem 0rem rgba(8, 159, 124, 0.25),
+    0.2rem 0.2rem 1.2rem 0rem rgba(8, 159, 124, 0.25);
+  padding: 2.4rem;
+  padding-left: 4rem;
+  padding-right: 8.2rem;
+  background-image: url("../images/automation-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 5.6rem 100%;
+  flex-grow: 1;
+  gap: 1.4rem;
+  padding-top: 3rem;
+
+  @include breakpoint(mobile) {
+    border-radius: 0.6rem;
+
+    box-shadow: -0.0891rem -0.0891rem 0.5345rem 0rem rgba(8, 159, 124, 0.25),
+      0.0891rem 0.0891rem 0.5345rem 0rem rgba(8, 159, 124, 0.25);
+    gap: 0.5rem;
+    padding: 1.2rem;
+    padding-right: 0.4rem;
+    background-size: 2.6rem 100%;
+  }
+}
+
+.numbers__card-amount {
+  font-size: 8.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  color: var(--primary-color);
+
+  @include breakpoint(mobile) {
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+  }
+}
+
+.numbers__card-text {
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+
+  @include breakpoint(mobile) {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%;
+  }
+}
