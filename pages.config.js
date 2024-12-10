@@ -22,6 +22,7 @@ import industryCategory from "./pages-data/industryCategory";
 import lab from "./pages-data/lab";
 import completeSolution from "./pages-data/completeSolution";
 import cell from "./pages-data/cell";
+import subjectsScience from "./pages-data/subjectsScience";
 
 const pagesConfig = {
   ...home,
@@ -48,6 +49,7 @@ const pagesConfig = {
   ...lab,
   ...completeSolution,
   ...cell,
+  ...subjectsScience,
 };
 
 export default pagesConfig;
