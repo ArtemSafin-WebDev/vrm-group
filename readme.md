@@ -27,6 +27,7 @@
 - **[Наука и образование](https://vrm-group.netlify.app/subjects-science.html)**
 - **[Профессионалитет](https://vrm-group.netlify.app/lab.html)**
 - **[Ячейка](https://vrm-group.netlify.app/cell.html)**
+- **[Промышленность](https://vrm-group.netlify.app/industry.html)**
 - **[Литейная промышленность](https://vrm-group.netlify.app/industry-category.html)**
 - **[Промышленность подкатегория](https://vrm-group.netlify.app/industry-subcategory.html)**
 - **[Карточка готового решения](https://vrm-group.netlify.app/complete-solution.html)**

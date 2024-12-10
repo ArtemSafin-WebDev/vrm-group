@@ -43,10 +43,33 @@
     grid-gap: 1.6rem;
   }
 }
+.catalog__categories-list--industry {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 2.4rem;
+
+  @include breakpoint(mobile) {
+    grid-gap: 1.6rem;
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 
 .catalog__categories-list-item {
   display: flex;
   flex-direction: column;
+
+  @include breakpointMF(small-tablet) {
+    &--large {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    &--large {
+      min-height: 26rem;
+    }
+  }
 }
 
 .catalog__categories-card {
@@ -62,6 +85,30 @@
   grid-template-areas: "stack";
   position: relative;
   isolation: isolate;
+  overflow: hidden;
+  overflow: clip;
+  grid-template-rows: 1fr;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      359deg,
+      #02c498 1.42%,
+      rgba(255, 255, 255, 0) 61.34%
+    );
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
 
   @include breakpoint(mobile) {
     border-radius: 0.8rem;
@@ -379,11 +426,18 @@
   margin-top: 4rem;
   margin-bottom: 6.4rem;
 
+  .catalog__categories + & {
+    margin-top: 10rem;
+  }
+
   @include breakpoint(mobile) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 0.8rem;
     margin-top: 3.2rem;
     margin-bottom: 4rem;
+    .catalog__categories + & {
+      margin-top: 6.4rem;
+    }
   }
   &:last-child {
     margin-bottom: 0;

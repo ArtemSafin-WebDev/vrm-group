@@ -23,6 +23,7 @@ import lab from "./pages-data/lab";
 import completeSolution from "./pages-data/completeSolution";
 import cell from "./pages-data/cell";
 import subjectsScience from "./pages-data/subjectsScience";
+import industry from "./pages-data/industry";
 
 const pagesConfig = {
   ...home,
@@ -50,6 +51,7 @@ const pagesConfig = {
   ...completeSolution,
   ...cell,
   ...subjectsScience,
+  ...industry,
 };
 
 export default pagesConfig;

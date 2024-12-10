@@ -168,6 +168,10 @@ svg {
   fill: currentColor;
 }
 
+picture {
+  display: contents;
+}
+
 img {
   border-style: none;
   max-width: 100%;
