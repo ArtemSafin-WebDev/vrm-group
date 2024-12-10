@@ -22,6 +22,7 @@
 
 ### Остальные страницы
 
+- **[Направления деятельности](https://vrm-group.netlify.app/subjects.html)**
 - **[Индивидуальные решения](https://vrm-group.netlify.app/individual-solutions.html)**
 - **[Обучение](https://vrm-group.netlify.app/education.html)**
 - **[О компании](https://vrm-group.netlify.app/about.html)**
@@ -35,5 +36,4 @@
 - **[Бренд](https://vrm-group.netlify.app/brand.html)**
 - **[Все проекты](https://vrm-group.netlify.app/projects.html)**
 - **[Кейс](https://vrm-group.netlify.app/project.html)**
-- **[Корзина](https://vrm-group.netlify.app/cart.html)**
 - **[404](https://vrm-group.netlify.app/404.html)**

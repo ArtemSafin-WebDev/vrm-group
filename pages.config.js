@@ -21,6 +21,7 @@ import industrySubcategory from "./pages-data/industrySubcategory";
 import industryCategory from "./pages-data/industryCategory";
 import lab from "./pages-data/lab";
 import completeSolution from "./pages-data/completeSolution";
+import cell from "./pages-data/cell";
 
 const pagesConfig = {
   ...home,
@@ -46,6 +47,7 @@ const pagesConfig = {
   ...industryCategory,
   ...lab,
   ...completeSolution,
+  ...cell,
 };
 
 export default pagesConfig;

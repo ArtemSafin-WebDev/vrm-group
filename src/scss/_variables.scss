@@ -5,6 +5,7 @@
   --involve: "Involve", sans-serif;
   --content-padding: 4rem;
   --container-width: 150rem;
+  --inter: "Inter", sans-serif;
 
   @include breakpoint(mobile) {
     --content-padding: 2.4rem;
