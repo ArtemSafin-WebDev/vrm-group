@@ -21,6 +21,7 @@ import simpleCounter from "./simpleCounter";
 import labSlider from "./labSlider";
 import menu from "./menu";
 import options from "./options";
+import forms from "./forms";
 
 document.addEventListener("DOMContentLoaded", () => {
   menu();
@@ -45,6 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
   simpleCounter();
   labSlider();
   options();
+  forms();
 });
 
 window.addEventListener("load", () => {

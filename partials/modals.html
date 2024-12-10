@@ -12,17 +12,23 @@
             <div class="modal__callback-text">
                 Оставьте заявку, и мы вам перезвоним
             </div>
-            <form action="/" method="POST" class="modal__form">
+            <form action="/" method="POST" class="modal__form js-form">
                 <div class="modal__form-fields">
                     <div class="modal__form-field">
-                        <input type="text" name="your-name" class="text-input" required="" placeholder="Имя*">
+                        <div class="modal__form-input-wrapper">
+                            <input type="text" name="your-name" class="text-input" required="" placeholder="Имя*">
+                        </div>
                     </div>
                     <div class="modal__form-field">
-                        <input type="tel" name="your-phone" class="text-input" required="" placeholder="Телефон*">
+                        <div class="modal__form-input-wrapper">
+                            <input type="tel" name="your-phone" class="text-input" required="" placeholder="Телефон*">
+                        </div>
                     </div>
                     <div class="modal__form-field">
-                        <input type="text" name="your-text" class="text-input" required=""
-                            placeholder="Текст сообщения">
+                        <div class="modal__form-input-wrapper">
+                            <input type="text" name="your-text" class="text-input" required=""
+                                placeholder="Текст сообщения">
+                        </div>
                     </div>
                     <div class="modal__form-field">
                         <div class="select js-select" data-placeholder="Способ связи">

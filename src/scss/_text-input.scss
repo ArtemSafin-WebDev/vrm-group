@@ -11,4 +11,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 135%;
+  &.not-valid {
+    border-color: var(--red);
+  }
 }
