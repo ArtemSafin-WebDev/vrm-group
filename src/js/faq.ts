@@ -3,7 +3,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function faq() {
-  const elements = Array.from(document.querySelectorAll<HTMLElement>(".faq"));
+  const elements = Array.from(
+    document.querySelectorAll<HTMLElement>(".faq, .faq-page")
+  );
 
   elements.forEach((element) => {
     const accordions = Array.from(element.querySelectorAll(".faq__accordion"));

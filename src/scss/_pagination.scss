@@ -2,6 +2,7 @@
   display: block;
 }
 
+.pagination > ul,
 .pagination__list {
   display: flex;
   align-items: center;
@@ -9,9 +10,12 @@
   gap: 2.4rem;
 }
 
+.pagination > ul > li,
 .pagination__list-item {
   flex-shrink: 0;
 }
+
+.pagination > ul > li > a,
 .pagination__link {
   font-size: 1.8rem;
   font-style: normal;
@@ -25,7 +29,7 @@
     color: #d9d9d9;
   }
 
-  &:not(.active) {
+  &:not(.active):not(.current) {
     @media (hover: hover) and (pointer: fine) {
       &:hover {
         color: var(--primary-color);
@@ -33,7 +37,8 @@
     }
   }
 
-  &.active {
+  &.active,
+  &.current {
     width: 3rem;
     height: 2.8rem;
     border-radius: 0.4rem;

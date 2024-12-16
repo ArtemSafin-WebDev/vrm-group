@@ -325,6 +325,54 @@
 }
 
 .catalog__filters-form-select {
+  @include breakpointMF(small-tablet) {
+    .select__dropdown {
+      padding-top: 0.8rem;
+    }
+    .select__dropdown-inner {
+      border-radius: 0.8rem;
+      border: 1px solid var(--3, #a1a1a1);
+      background: #fff;
+      padding: 3.2rem;
+    }
+
+    .select__choices-list {
+      gap: 1.6rem;
+    }
+
+    .select__choice {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+    }
+
+    .select__choice-content {
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 135%;
+      color: #02211a !important;
+    }
+
+    .select__choice-mark {
+      display: grid;
+      place-items: center;
+      width: 2.4rem;
+      height: 2.4rem;
+      flex-shrink: 0;
+      border: 1px solid #ddd;
+      transition: background-color 0.2s, border-color 0.2s;
+
+      svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: white;
+        transition: opacity 0.2s;
+        opacity: 0;
+      }
+    }
+  }
   @include breakpoint(mobile) {
     .select {
       &::before {
