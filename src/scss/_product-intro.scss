@@ -88,11 +88,12 @@
 .product-intro__gallery-slider-card-image {
   width: 100%;
   height: auto;
-  aspect-ratio: 554 / 472;
   object-fit: cover;
 
-  @include breakpoint(mobile) {
-    aspect-ratio: 311 / 267;
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 85%;
   }
 }
 
@@ -549,7 +550,7 @@
   font-weight: 600;
   line-height: 90%;
 
-  align-self: flex-end;
+  align-self: center;
 }
 
 .product-intro__variants-card-mark {
@@ -587,8 +588,8 @@
   display: grid;
   place-items: center;
   grid-area: info;
-  align-self: flex-end;
-  justify-self: flex-end;
+  align-self: center;
+  justify-self: center;
   width: 1.6rem;
   height: 1.6rem;
   color: var(--primary-color);
@@ -599,6 +600,17 @@
   font-weight: 500;
   line-height: normal;
   font-family: var(--inter);
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 230%;
+    height: 230%;
+    transform: translate(-50%, -50%);
+  }
+
   &:link,
   &:visited {
     color: var(--primary-color);

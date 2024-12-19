@@ -4,6 +4,14 @@
 
   &--robot {
     margin-bottom: 5.6rem;
+
+    &:has(+ .has-questions) {
+      margin-bottom: 15rem;
+
+      @include breakpoint(mobile) {
+        margin-bottom: 7rem;
+      }
+    }
   }
 
   @include breakpoint(mobile) {

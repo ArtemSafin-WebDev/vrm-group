@@ -221,6 +221,12 @@
   font-weight: 600;
   line-height: 120%;
 
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+
   @include breakpoint(mobile) {
     font-size: 1.6rem;
     font-style: normal;

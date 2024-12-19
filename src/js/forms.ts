@@ -32,7 +32,6 @@ export default function forms() {
           })
           .then((res) => {
             console.log(res.data);
-
             if (res.data.status === "mail_sent") {
               const parentModal = form.closest<HTMLElement>(".js-modal");
               parentModal?.classList.remove("active");
@@ -41,6 +40,13 @@ export default function forms() {
               if (modal) {
                 modal.classList.add("active");
                 document.body.classList.add("modal-open");
+
+                setTimeout(() => {
+                  if (modal.classList.contains("active")) {
+                    modal.classList.remove("active");
+                    document.body.classList.remove("modal-open");
+                  }
+                }, 4000);
               }
               if (form) {
                 form.reset();
