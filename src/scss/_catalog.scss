@@ -58,6 +58,10 @@
   display: flex;
   flex-direction: column;
 
+  &--large {
+    order: -1;
+  }
+
   @include breakpointMF(small-tablet) {
     &--large {
       grid-column: span 2;

@@ -89,6 +89,7 @@
   width: 100%;
   height: auto;
   aspect-ratio: 554 / 472;
+  object-fit: cover;
 
   @include breakpoint(mobile) {
     aspect-ratio: 311 / 267;
@@ -698,6 +699,7 @@
   padding-right: 4.7rem;
   margin-left: auto;
   flex-shrink: 0;
+  align-self: center;
 
   @include breakpoint(mobile) {
     margin: 0;

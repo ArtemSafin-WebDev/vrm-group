@@ -1,9 +1,17 @@
 .page-header {
   @include blockWrapper;
   padding: 2.4rem 0;
-  background-color: #fff;
+
   position: relative;
   z-index: 140;
+  transition: background-color 0.2s;
+
+  @include breakpointMF(small-tablet) {
+    &:has(.page-header__nav-list-item--catalog:hover) {
+      background-color: #fff;
+    }
+  }
+
   @include breakpoint(mobile) {
     padding: 1rem 0;
   }

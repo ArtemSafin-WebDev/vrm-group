@@ -1,5 +1,4 @@
 .intro {
-  padding-top: 1rem;
   margin-bottom: 15rem;
 
   @include breakpoint(mobile) {
@@ -16,32 +15,106 @@
   grid-column-end: main-end;
   grid-row: 1 / 2;
   display: block;
+  filter: drop-shadow(-0.2rem -0.2rem 1.2rem rgba(8, 159, 124, 0.25))
+    drop-shadow(0.2rem 0.2rem 1.2rem rgba(8, 159, 124, 0.25));
+
+  @include breakpoint(mobile) {
+    filter: drop-shadow(0.2rem 0.2rem 0.6rem rgba(8, 159, 124, 0.25))
+      drop-shadow(-0.2rem -0.2rem 0.6rem rgba(8, 159, 124, 0.25));
+  }
+}
+
+.intro__wrapper-bg-inner {
+  background-color: var(--primary-color);
+
+  background-image: url("../images/intro-background.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include breakpointMF(small-tablet) {
+    -webkit-mask-image: url("../images/vacancies-mask.svg");
+    mask-image: url("../images/vacancies-mask.svg");
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: none;
+    mask-repeat: no-repeat;
+    margin: 0 1.6rem;
+  }
+
+  @include breakpoint(mobile) {
+    -webkit-mask-image: url("../images/intro-mask-mobile.svg");
+    mask-image: url("../images/intro-mask-mobile.svg");
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: none;
+    mask-repeat: no-repeat;
+    background-image: url("../images/intro-background-mobile.webp");
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 16.6rem;
+      background: linear-gradient(
+        180deg,
+        rgba(13, 201, 164, 0) 0%,
+        rgba(23, 121, 102, 0.5) 100%
+      );
+
+      z-index: 10;
+    }
+  }
 }
 
 .intro__wrapper-inner {
   @include blockContent;
   grid-row: 1 / 2;
   z-index: 5;
-  padding-top: 17rem;
-  padding-bottom: 17rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   color: white;
   display: flex;
   flex-direction: column;
+  align-self: center;
 
   @include breakpoint(mobile) {
     padding-top: 10rem;
     padding-bottom: 6.4rem;
+    align-self: stretch;
   }
 }
 
 .intro__wrapper-bg-card {
   display: block;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 40%;
+
+    @include breakpoint(mobile) {
+      padding-bottom: 186%;
+    }
+  }
 }
 
 .intro__wrapper-bg-card-image {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
 }
 
 .intro__text-slider {
@@ -60,6 +133,7 @@
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+  min-height: 42rem;
 
   @include breakpoint(mobile) {
     max-width: none;
@@ -99,7 +173,7 @@
   display: flex;
   align-items: center;
   gap: 3.2rem;
-  margin-top: auto;
+  margin-top: 4rem;
   @include breakpoint(mobile) {
     justify-content: center;
     gap: 1.6rem;
