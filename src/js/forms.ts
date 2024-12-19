@@ -34,6 +34,8 @@ export default function forms() {
             console.log(res.data);
 
             if (res.data.status === "mail_sent") {
+              const parentModal = form.closest<HTMLElement>(".js-modal");
+              parentModal?.classList.remove("active");
               const modal =
                 document.querySelector<HTMLElement>("#success-modal");
               if (modal) {

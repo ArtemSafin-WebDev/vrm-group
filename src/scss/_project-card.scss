@@ -113,10 +113,11 @@
   }
 }
 
-.project-card__pagination {
+.project-card__pagination.swiper-pagination-horizontal {
   position: absolute;
   left: 0;
   right: 0;
+  top: auto;
   z-index: 12;
   width: auto;
   bottom: 100%;
@@ -138,7 +139,7 @@
     background-color: rgba(white, 0.8);
     flex-shrink: 0;
     transition: background-color 0.2s;
-
+    margin: 0;
     @include breakpoint(mobile) {
       width: 0.8rem;
       height: 0.8rem;

@@ -65,6 +65,7 @@
   line-height: 135%;
   color: #a1a1a1;
   margin-bottom: 0.8rem;
+  text-transform: uppercase;
 
   @include breakpoint(mobile) {
     font-size: 1.4rem;

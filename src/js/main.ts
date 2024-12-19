@@ -12,7 +12,7 @@ import intro from "./intro";
 import reviewCards from "./reviewCards";
 import fancybox from "./fancybox";
 import modals from "./modals";
-import gallerySlider from "./gallerySlider";
+
 import reviewsSlider from "./reviewsSlider";
 import catalog from "./catalog";
 import equipment from "./equipment";
@@ -22,6 +22,7 @@ import labSlider from "./labSlider";
 import menu from "./menu";
 import options from "./options";
 import forms from "./forms";
+import complectation from "./complectation";
 
 document.addEventListener("DOMContentLoaded", () => {
   menu();
@@ -39,7 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
   team();
   reviewCards();
   modals();
-  gallerySlider();
   catalog();
   equipment();
   productGallery();
@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   labSlider();
   options();
   forms();
+  complectation();
 });
 
 window.addEventListener("load", () => {
