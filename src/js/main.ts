@@ -23,6 +23,7 @@ import menu from "./menu";
 import options from "./options";
 import forms from "./forms";
 import complectation from "./complectation";
+import cart from "./cart";
 
 document.addEventListener("DOMContentLoaded", () => {
   menu();
@@ -48,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   options();
   forms();
   complectation();
+  cart();
 });
 
 window.addEventListener("load", () => {

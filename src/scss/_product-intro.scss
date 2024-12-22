@@ -27,10 +27,12 @@
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-gap: 2.4rem;
+  align-items: flex-start;
   @include breakpoint(mobile) {
     display: flex;
     flex-direction: column;
     gap: 3.2rem;
+    align-items: stretch;
   }
 }
 
@@ -104,6 +106,10 @@
   gap: 1.6rem;
   margin-top: 4rem;
   width: auto;
+
+  &.swiper-pagination-lock {
+    display: none;
+  }
 
   @include breakpoint(mobile) {
     margin-top: 2.4rem;

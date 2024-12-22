@@ -984,7 +984,7 @@
   height: 2.4rem;
   border-radius: 50%;
   background-color: var(--primary-color);
-
+  flex-shrink: 0;
   @include breakpoint(mobile) {
     display: none;
   }
