@@ -13,6 +13,7 @@ export default function productGallery() {
       slidesPerView: 1,
       speed: 600,
       modules: [Pagination],
+      spaceBetween: 10,
       pagination: {
         el: element.querySelector<HTMLElement>(
           ".product-intro__gallery-pagination"

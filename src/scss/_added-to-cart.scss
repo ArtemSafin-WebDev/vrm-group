@@ -1,0 +1,70 @@
+.added-to-cart {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+  z-index: 40;
+  width: 40rem;
+  max-width: calc(100% - 4rem);
+
+  &.shown {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+}
+
+.added-to-cart__inner {
+  background: #fff;
+  box-shadow: -0.2rem -0.2rem 1.2rem 0rem rgba(8, 159, 124, 0.25),
+    0.2rem 0.2rem 1.2rem 0rem rgba(8, 159, 124, 0.25);
+  padding: 3.2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.added-to-cart__close {
+  position: absolute;
+  right: 1.6rem;
+  top: 1.6rem;
+  svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: var(--primary-color);
+    transition: fill 0.2s;
+  }
+}
+
+.added-to-cart__text {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+}
+
+.added-to-cart__link {
+  align-self: flex-start;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  color: rgba(#02211a, 0.8);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 1px;
+  text-decoration-skip-ink: none;
+  &:link,
+  &:visited {
+    color: rgba(#02211a, 0.8);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--primary-color);
+    }
+  }
+}
