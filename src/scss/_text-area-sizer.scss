@@ -1,0 +1,37 @@
+.text-area-sizer {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "stack";
+
+  &::before {
+    content: attr(data-text) " ";
+    grid-area: stack;
+    white-space: pre-wrap;
+    visibility: hidden;
+  }
+
+  textarea {
+    grid-area: stack;
+    align-self: stretch;
+    justify-self: stretch;
+    width: 100%;
+    overflow: hidden;
+    min-height: none;
+    height: auto;
+
+    // height: 5.6rem;
+  }
+
+  & > textarea,
+  &::before {
+    border: 1px solid #dadada;
+    padding: 1.6rem 2.4rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 135%;
+    width: 100%;
+
+    border-radius: 4.5rem;
+  }
+}

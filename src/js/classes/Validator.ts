@@ -16,6 +16,7 @@ type Locale = {
   emailField: string;
   alphanumericField: string;
   phoneField: string;
+  alphaField: string;
 };
 
 type Localization = {
@@ -29,12 +30,14 @@ const defaultLocalization: Localization = {
     emailField: "Введите корректный E-mail",
     alphanumericField: "Разрешены только цифры и буквы",
     phoneField: "Введите правильный номер телефона",
+    alphaField: "Разрешены только буквы",
   },
   en: {
     requiredField: "Field is required",
     emailField: "Enter correct E-mail",
     alphanumericField: "Only digits and numbers allowed",
     phoneField: "Enter correct phone number",
+    alphaField: "Only letters are allowed",
   },
 };
 
@@ -47,7 +50,7 @@ class Validator {
   public errors: ValidationError[] = [];
   private readonly emailRegex =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-
+  private alphaRegex = /^[a-zA-Zа-яА-ЯёЁ\s]+$/;
   private readonly phoneRegex =
     /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
   private localization: Localization;
@@ -156,6 +159,22 @@ class Validator {
           );
         });
       }
+      if (field.matches("[data-alpha-field]")) {
+        field.addEventListener("beforeinput", (event) => {
+          let beforeValue = field.value;
+          event.target?.addEventListener(
+            "input",
+            () => {
+              if (!(field.value.match(this.alphaRegex) || field.value === "")) {
+                field.value = beforeValue;
+              }
+            },
+            {
+              once: true,
+            }
+          );
+        });
+      }
     });
   }
 
@@ -177,6 +196,15 @@ class Validator {
         });
       }
     }
+
+    // if (field.matches("[data-alpha-field]") && value) {
+    //   if (!value.match(this.alphaRegex)) {
+    //     this.errors.push({
+    //       element: field,
+    //       message: this.localization[this.locale].alphaField,
+    //     });
+    //   }
+    // }
 
     if (field.matches('[type="tel"]') && value) {
       if (!value.match(this.phoneRegex)) {

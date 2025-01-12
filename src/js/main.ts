@@ -24,6 +24,9 @@ import options from "./options";
 import forms from "./forms";
 import complectation from "./complectation";
 import cart from "./cart";
+import textAreaSizer from "./textAreaSizer";
+import automation from "./automation";
+import reasons from "./reasons";
 
 document.addEventListener("DOMContentLoaded", () => {
   menu();
@@ -50,6 +53,9 @@ document.addEventListener("DOMContentLoaded", () => {
   forms();
   complectation();
   cart();
+  textAreaSizer();
+  automation();
+  reasons();
 });
 
 window.addEventListener("load", () => {

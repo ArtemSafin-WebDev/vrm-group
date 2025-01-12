@@ -11,7 +11,8 @@
                 <div class="has-questions__form-fields">
                     <div class="has-questions__form-field">
                         <div class="has-questions__form-input-wrapper">
-                            <input type="text" name="your-name" class="text-input" required="" placeholder="Имя*">
+                            <input type="text" name="your-name" class="text-input" required="" placeholder="Имя*"
+                                data-alpha-field="">
                         </div>
                     </div>
                     <div class="has-questions__form-field">
@@ -21,11 +22,13 @@
                     </div>
                     <div class="has-questions__form-field">
                         <div class="has-questions__form-input-wrapper">
-                            <input type="text" name="your-text" class="text-input" required=""
-                                placeholder="Текст сообщения">
+                            <div class="text-area-sizer">
+                                <textarea name="your-text" required="" placeholder="Текст сообщения"
+                                    rows="1"></textarea>
+                            </div>
                         </div>
                     </div>
-                    <div class="has-questions__form-field">
+                    <div class="has-questions__form-field has-questions__form-field--align-start">
                         <div class="select js-select" data-placeholder="Способ связи">
                             <button class="select__btn" type="button">
                                 <span class="select__btn-text js-btn-text">

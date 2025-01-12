@@ -82,12 +82,12 @@
   transition: background-color 0.2s, color 0.2s, border-color 0.2s, opacity 0.2s;
 
   @media (hover: hover) and (pointer: fine) {
-    &:hover {
+    &:not(.active):hover {
       opacity: 0.43;
     }
   }
   &.active {
-    opacity: 0.3;
+    border-color: var(--primary-color);
     cursor: default;
   }
 

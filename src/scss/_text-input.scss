@@ -15,3 +15,21 @@
     border-color: var(--red);
   }
 }
+
+textarea.text-input {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+}
+
+.text-input--resizeable {
+  background-image: url("../images/resize-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem bottom 0.5rem;
+  background-size: 2.3rem 2.3rem;
+  resize: vertical;
+  min-height: 5.6rem;
+  &::-webkit-resizer {
+    background: transparent;
+    display: none;
+  }
+}

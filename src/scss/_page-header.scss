@@ -221,6 +221,24 @@
   }
 }
 
+.page-header__cart-items-amount {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  border: 1px solid rgba(221, 221, 221, 1);
+  color: black;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.1;
+  background-color: #fff;
+}
+
 .page-header__only-desktop {
   display: contents;
 
@@ -557,6 +575,12 @@
   @include breakpoint(mobile) {
     display: none;
   }
+}
+
+.page-header__catalog-submenu-list-item:not(:has(.page-header__catalog-submenu))
+  .page-header__catalog-submenu-link
+  .page-header__catalog-submenu-link-arrow {
+  display: none;
 }
 
 .page-header__brands-list {

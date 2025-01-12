@@ -33,20 +33,30 @@
     overflow: visible;
 
     & > .swiper-wrapper {
-      display: grid;
-      grid-auto-flow: column;
-      grid-auto-columns: 74rem;
-      grid-gap: 2rem;
+      // display: grid;
+      // grid-auto-flow: column;
+      // grid-auto-columns: 74rem;
+      // grid-gap: 2rem;
 
-      @include breakpoint(mobile) {
-        grid-auto-columns: 24rem;
-        grid-gap: 0.9rem;
-      }
+      // @include breakpoint(mobile) {
+      //   grid-auto-columns: 24rem;
+      //   grid-gap: 0.9rem;
+      // }
       & > .swiper-slide {
         height: auto;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
+        width: 74rem;
+        margin-right: 2rem;
+        &:last-child {
+          margin-right: 0;
+        }
+
+        @include breakpoint(mobile) {
+          width: 24rem;
+          margin-right: 0.9rem;
+        }
       }
     }
   }

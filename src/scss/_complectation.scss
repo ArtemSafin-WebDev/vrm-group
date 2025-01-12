@@ -326,8 +326,9 @@
 
 .complectation__variant-list-item {
   border-bottom: 1px solid #ddd;
-  &:last-child {
-    border: none;
+
+  &.first {
+    order: -40;
   }
 
   .complectation__variant-robot:not(.show-all) & {
@@ -397,7 +398,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .complectation__variant-card-wrapper {

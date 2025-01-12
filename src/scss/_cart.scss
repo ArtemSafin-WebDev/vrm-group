@@ -17,7 +17,6 @@
 
 .cart__breadcrumbs {
   margin-bottom: 5rem;
-
   @include breakpoint(mobile) {
     margin-bottom: 3.2rem;
   }
@@ -209,6 +208,11 @@
   line-height: 135%;
   transition: color 0.2s;
 
+  &[disabled] {
+    cursor: default;
+    opacity: 0.5;
+  }
+
   @media (hover: hover) and (pointer: fine) {
     &:not([disabled]):hover {
       color: var(--primary-color);
@@ -326,7 +330,7 @@
   text-decoration-thickness: 0.5px;
   text-underline-offset: 2px;
   text-decoration-skip-ink: none;
-
+  transition: color 0.2s;
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       color: var(--primary-color);
@@ -339,5 +343,24 @@
     font-weight: 400;
     line-height: 135%;
     align-self: center;
+  }
+}
+
+.cart__empty {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+.cart__empty a {
+  text-decoration: underline;
+  text-underline-offset: 1px;
+  text-decoration-thickness: 1px;
+  text-decoration-skip-ink: none;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: var(--primary-color);
+    }
   }
 }

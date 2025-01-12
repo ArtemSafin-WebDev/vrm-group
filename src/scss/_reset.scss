@@ -98,7 +98,6 @@ textarea {
   width: 100%;
   overflow: auto;
   height: 20rem;
-  @include customScrollbar();
 }
 
 input::-webkit-outer-spin-button,

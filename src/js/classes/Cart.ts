@@ -26,7 +26,17 @@ type Cell = {
   };
 };
 
-type CartItem = Robot | Cell;
+type Equipment = {
+  type: "equipment";
+  id: string | number;
+  title: string;
+  price: number;
+  quantity: number;
+  image?: string;
+  href: string;
+};
+
+type CartItem = Robot | Cell | Equipment;
 
 export default class Cart {
   public items: CartItem[] = [];
