@@ -326,16 +326,19 @@
 
 .complectation__variant-list-item {
   border-bottom: 1px solid #ddd;
+}
 
-  &.first {
-    order: -40;
-  }
+.complectation__variant-robot:not(.show-all)
+  .complectation__variant-list-item:has(
+    .complectation__variant-card-input:not(:checked)
+  ) {
+  display: none;
+}
 
-  .complectation__variant-robot:not(.show-all) & {
-    &:not(:first-child) {
-      display: none;
-    }
-  }
+.complectation__variant-list-item:has(
+    .complectation__variant-card-input:checked
+  ) {
+  order: -10;
 }
 
 .complectation__variant-card {
@@ -356,11 +359,13 @@
   display: flex;
   align-items: stretch;
   gap: 1.6rem;
-  padding: 1.2rem;
+  padding: 1.2rem 1.6rem;
   padding-bottom: 2.4rem;
   flex-grow: 1;
 
   @include breakpoint(mobile) {
+    padding-right: 1.2rem;
+    padding-left: 1.2rem;
     padding-top: 1.6rem;
     padding-bottom: 1.6rem;
     gap: 0.8rem;
@@ -505,6 +510,13 @@
     font-weight: 600;
     line-height: 125%;
   }
+}
+
+.complectation__variant:has(
+    .complectation__variant-no-robot .complectation__variant-card-input:checked
+  )
+  .complectation__variant-price-remark {
+  display: none;
 }
 
 .complectation__variant-show-more {
