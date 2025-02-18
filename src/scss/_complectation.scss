@@ -55,6 +55,11 @@
       grid-column: 1 / 2;
       grid-row: 1 / -1;
     }
+
+    .complectation--four-items & {
+      grid-template-columns: minmax(0, 35.7rem) repeat(4, minmax(0, 1fr));
+      grid-column-gap: 2.4rem;
+    }
   }
 
   @include breakpoint(mobile) {
@@ -93,6 +98,11 @@
     grid-gap: 4rem;
     grid-auto-rows: auto;
     grid-row-gap: 0;
+
+    .complectation--four-items & {
+      grid-template-columns: minmax(0, 35.7rem) repeat(4, minmax(0, 1fr));
+      grid-column-gap: 2.4rem;
+    }
   }
 
   @include breakpoint(mobile) {
@@ -234,6 +244,11 @@
     grid-gap: 4rem;
     align-items: flex-start;
     margin-top: 2.4rem;
+
+    .complectation--four-items & {
+      grid-template-columns: minmax(0, 35.7rem) repeat(4, minmax(0, 1fr));
+      grid-column-gap: 2.4rem;
+    }
   }
 
   @include breakpoint(mobile) {
@@ -363,6 +378,16 @@
   padding-bottom: 2.4rem;
   flex-grow: 1;
 
+  @include breakpointMF(small-tablet) {
+    .complectation--four-items & {
+      padding-left: 1.2rem;
+      padding-right: 1.2rem;
+      padding-top: 1.2rem;
+      padding-bottom: 2.4rem;
+      gap: 1.2rem;
+    }
+  }
+
   @include breakpoint(mobile) {
     padding-right: 1.2rem;
     padding-left: 1.2rem;
@@ -384,6 +409,12 @@
     -0.2rem -0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset,
     0.2rem 0.2rem 0.2rem 0rem rgba(255, 255, 255, 0.25) inset;
   align-self: flex-start;
+
+  @include breakpointMF(small-tablet) {
+    .complectation--four-items & {
+      width: 5.6rem;
+    }
+  }
 
   @include breakpoint(mobile) {
     border-radius: 0.24rem;
@@ -416,6 +447,13 @@
   grid-gap: 4rem;
   grid-row-gap: 2.5rem;
 
+  @include breakpointMF(small-tablet) {
+    .complectation--four-items & {
+      grid-column-gap: 2.4rem;
+      grid-row-gap: 1.2rem;
+    }
+  }
+
   @include breakpoint(mobile) {
     grid-gap: 0.8rem;
     grid-row-gap: 1.2rem;
@@ -428,6 +466,12 @@
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
+
+  @include breakpointMF(small-tablet) {
+    .complectation--four-items & {
+      font-size: 1.4rem;
+    }
+  }
 
   @include breakpoint(mobile) {
     font-size: 1.4rem;
@@ -648,6 +692,12 @@
   flex-direction: column;
   text-align: center;
   gap: 3.2rem;
+
+  @include breakpointMF(small-tablet) {
+    .complectation--four-items & {
+      padding: 2.4rem 2rem;
+    }
+  }
 
   @include breakpoint(mobile) {
     padding: 1.6rem;

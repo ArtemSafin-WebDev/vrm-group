@@ -26,6 +26,7 @@ import subjectsScience from "./pages-data/subjectsScience";
 import industry from "./pages-data/industry";
 import complectation from "./pages-data/complectation";
 import cart from "./pages-data/cart";
+import complectation2 from "./pages-data/complectation-2";
 
 const pagesConfig = {
   ...home,
@@ -56,6 +57,7 @@ const pagesConfig = {
   ...industry,
   ...complectation,
   ...cart,
+  ...complectation2,
 };
 
 export default pagesConfig;

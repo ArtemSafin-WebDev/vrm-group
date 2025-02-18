@@ -59,6 +59,7 @@
   overflow: hidden;
   backface-visibility: hidden;
   padding: 2.4rem;
+  position: relative;
 
   @include breakpoint(mobile) {
     font-size: 2.4rem;
@@ -77,6 +78,52 @@
     border-radius: 1.3637rem;
     @include breakpoint(mobile) {
       border-radius: 0.8rem;
+    }
+  }
+}
+
+.product-intro__gallery-slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  flex-shrink: 0;
+  width: 5.6rem;
+  height: 5.6rem;
+  border: 1px solid #a1a1a1;
+  border-radius: 50%;
+  transition: opacity 0.2s;
+  z-index: 10;
+  @include breakpoint(mobile) {
+    display: none;
+  }
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: #a1a1a1;
+  }
+
+  &--prev {
+    left: 3.2rem;
+  }
+
+  &--next {
+    right: 3.2rem;
+  }
+
+  &.swiper-button-disabled {
+    cursor: default;
+
+    @include breakpoint(mobile) {
+      opacity: 0.5;
+    }
+  }
+
+  &:not(.swiper-button-disabled) {
+    @media (hover: hover) {
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
 }

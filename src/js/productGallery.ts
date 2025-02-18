@@ -1,6 +1,6 @@
 import Swiper from "swiper";
 import "swiper/css";
-import { Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 
 export default function productGallery() {
   const elements = Array.from(
@@ -12,7 +12,7 @@ export default function productGallery() {
     new Swiper(container, {
       slidesPerView: 1,
       speed: 600,
-      modules: [Pagination],
+      modules: [Pagination, Navigation],
       spaceBetween: 10,
       pagination: {
         el: element.querySelector<HTMLElement>(
@@ -20,6 +20,14 @@ export default function productGallery() {
         ),
         type: "bullets",
         clickable: true,
+      },
+      navigation: {
+        prevEl: element.querySelector<HTMLButtonElement>(
+          ".product-intro__gallery-slider-arrow--prev"
+        ),
+        nextEl: element.querySelector<HTMLButtonElement>(
+          ".product-intro__gallery-slider-arrow--next"
+        ),
       },
     });
   });

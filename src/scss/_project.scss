@@ -40,19 +40,42 @@
   }
 }
 
+.project__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  justify-content: space-between;
+  margin-bottom: 4.8rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 3.2rem;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 2.4rem;
+  }
+}
+
 .project__info {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 2.4rem;
-  margin-bottom: 4.8rem;
 
   @include breakpoint(mobile) {
     flex-direction: column;
     align-items: stretch;
-    margin-bottom: 3.2rem;
+
     flex-wrap: nowrap;
     gap: 0.8rem;
+  }
+}
+
+.project__link {
+  align-self: flex-start;
+
+  @include breakpoint(mobile) {
+    align-self: stretch;
   }
 }
 
