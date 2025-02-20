@@ -14,6 +14,12 @@ export default function faq() {
         ".faq__accordion-dropdown"
       );
       accordion.addEventListener("click", (event) => {
+        const target = event.target as HTMLElement;
+        if (
+          target.matches(".faq__accordion-dropdown-content") ||
+          target.closest(".faq__accordion-dropdown-content")
+        )
+          return;
         event.preventDefault();
         accordions.forEach((otherAccordion) => {
           if (accordion !== otherAccordion)

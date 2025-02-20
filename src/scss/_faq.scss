@@ -59,9 +59,8 @@
   display: flex;
   align-items: flex-start;
   gap: 16rem;
-  user-select: none;
+  // user-select: none;
   cursor: pointer;
-
   @include breakpoint(mobile) {
     border-radius: 0.4rem;
     background: #fff;
@@ -132,6 +131,19 @@
   font-style: normal;
   font-weight: 400;
   line-height: 135%;
+  user-select: unset;
+  cursor: text;
+
+  a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 1px;
+    &:link,
+    &:visited {
+      color: var(--primary-color);
+    }
+  }
 
   @include breakpoint(mobile) {
     font-size: 1.4rem;
