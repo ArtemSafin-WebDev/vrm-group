@@ -1,3 +1,7 @@
+:root {
+  interpolate-size: allow-keywords;
+}
+
 *,
 *::after,
 *::before {
@@ -28,7 +32,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-
   color: var(--text-color);
   font-family: var(--involve);
   overscroll-behavior: none;

@@ -14,9 +14,8 @@ export default function options() {
     const items = Array.from(
       element.querySelectorAll<HTMLElement>(".options__tabs-item")
     );
+    const itemsParent = element.querySelector<HTMLElement>(".options__tabs");
     const setActive = (index: number) => {
-      const state = Flip.getState(".options__tabs-item");
-
       const initiallyActive = items[index]?.classList.contains("active");
       btns.forEach((btn) => btn.classList.remove("active"));
       items.forEach((item) => item.classList.remove("active"));
@@ -27,19 +26,6 @@ export default function options() {
         btns[index]?.classList.add("active");
         items[index]?.classList.add("active");
       }
-
-      Flip.from(state, {
-        duration: 0.4,
-        absoluteOnLeave: true,
-        onComplete: () => {
-          ScrollTrigger.refresh();
-        },
-        onEnter: (elements) => {
-          gsap.fromTo(elements, { opacity: 0 }, { opacity: 1, duration: 0.4 });
-        },
-        onLeave: (elements) =>
-          gsap.fromTo(elements, { opacity: 1 }, { opacity: 0, duration: 0.4 }),
-      });
     };
     btns.forEach((btn) => btn.classList.remove("active"));
     items.forEach((item) => item.classList.remove("active"));
@@ -52,5 +38,26 @@ export default function options() {
         setActive(btnIndex);
       });
     });
+
+    let swapped = false;
+    const mql = window.matchMedia("(max-width: 640px)");
+
+    const handleWidthChange = (e: MediaQueryListEvent | MediaQueryList) => {
+      if (e.matches && !swapped) {
+        btns.forEach((btn, btnIndex) => {
+          const parent = btn.parentElement;
+          if (!parent) return;
+          parent.appendChild(items[btnIndex]);
+        });
+        swapped = true;
+      } else {
+        if (!swapped) return;
+        items.forEach((item) => itemsParent?.appendChild(item));
+      }
+    };
+
+    mql.addEventListener("change", handleWidthChange);
+
+    handleWidthChange(mql);
   });
 }
