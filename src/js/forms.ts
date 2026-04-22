@@ -1,6 +1,22 @@
 import Validator from "./classes/Validator";
 import axios from "axios";
 
+declare global {
+  interface Window {
+    ym?: (
+      counterId: number,
+      method: "reachGoal",
+      goalName: string
+    ) => void;
+  }
+}
+
+const reachSendFormGoal = () => {
+  if (typeof window.ym === "function") {
+    window.ym(99917137, "reachGoal", "sendform");
+  }
+};
+
 export default function forms() {
   const forms = Array.from<HTMLFormElement>(
     document.querySelectorAll(".js-form")
@@ -33,6 +49,7 @@ export default function forms() {
           .then((res) => {
             console.log(res.data);
             if (res.data.status === "mail_sent") {
+              reachSendFormGoal();
               const parentModal = form.closest<HTMLElement>(".js-modal");
               parentModal?.classList.remove("active");
               const modal =
